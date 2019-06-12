@@ -66,6 +66,12 @@ void intro(){
     cout << "----------------------------------------------" << endl;
 }
 
+void close(){
+   cout << "--------------------------------------------" << endl;
+   cout << "As you can see I love Travis Scott" << endl;
+   cout << "Hope you enjoyed!" << endl; 
+}
+
 int main(){
     
     intro();
@@ -84,9 +90,7 @@ int main(){
     pl.add_song("SKELETONS");
     pl.play_list();
     
-    cout << "--------------------------------------------" << endl;
-    cout << "As you can see I love Travis Scott" << endl;
-    cout << "Hope you enjoyed!" << endl;
+    close();
     
     return 0;
 }
