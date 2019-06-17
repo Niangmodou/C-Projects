@@ -8,7 +8,7 @@ BinarySearch.cpp - Binary Search Algorithm performed on a C++ Vector
 
 Gradebook.cpp - A gradebook that helps professors organize the scores of their student's exams.
 
-Playlist.cpp - An implentation of a playlist class that simulates the functionality of a music playlist.
+Playlist.cpp - A playlist class that simulates the functionality of a music playlist.
 
 RockPaperScissors.cpp - An implementation of the classic Rock Paper Scissors game.
 
