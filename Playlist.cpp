@@ -10,12 +10,12 @@ private:
     vector<string>songList;
     
 public:
-    //USED TO ADD SONGS TO PLAYLIST
+    //ADDS SONG TO PLAYLIST
     void add_song(string songName){
         songList.push_back(songName);
     }
     
-    //USED TO ADD A SONG AFTER A CERTAIN SONG
+    // ADDS A SONG AFTER A CERTAIN SONG
     void add_song_after(string song_name,string new_song_name){
         bool contains = inList(song_name);
         if (contains){
@@ -35,7 +35,7 @@ public:
         
     }
     
-    //CHECK IF A SONG IS CURRENTLY IN THE PLAYLIST
+    //CHECKS IF GIVEN SONG IS IN THE PLAYLIST
     bool inList(string song_name){
         for(int i = 0; i < songList.size(); i++){
             if(songList.at(i) == song_name){
@@ -45,23 +45,49 @@ public:
         return false;
     }
     
-    //IMITATES PLAYING A SONG FROM THE PLAYLIST
+    //IMITATES PLAYING A SONG THEN REMOVES IT
     void play_song(string song_name){
         bool contains = inList(song_name);
+        int ind = findIndex(song_name);
+        
         if (!contains){
             cout<< "Song is Not in List" << endl;
         }else{
             cout << "Playing: "<<song_name<<endl;
+            songList.erase(songList.begin()+ind);
         }
     }
     
-    //PLAYS THE WHOLE PLAYLIST
+    // FINDS THE GIVEN INDEX OF A SONG WITHIN THE VECTOR
+    int findIndex(string song_name){
+        
+        for (int i = 0; i < songList.size(); i++){
+            if (songList.at(i) == song_name){
+                return i;
+            }
+        }
+        return -1;
+    }
+    
+    //REMOVES A GIVEN SONG FROM THE PLAYLIST
+    void removeSong(string song_name){
+        int ind = findIndex(song_name);
+        
+        if (inList(song_name)){
+            songList.erase(songList.begin()+ind);
+        }else{
+            cout << "SONG NOT IN PLAYLIST" <<endl;
+        }
+    }
+    
+    //PLAYS ALL THE SONGS IN THE PLAYLIST
     void play_list(){
         for (int i = 0 ; i < songList.size(); i++){
             cout << "Playing: " << songList.at(i) << endl;
         }
     }
-    //SHUFFLES THE PLAYLIST
+    
+    //SHUFFLES ALL THE SONGS IN THE PLAYLIST
     void shuffle(){
         vector<string>newList;
         int num;
@@ -121,8 +147,8 @@ int main(){
     cout << "" << endl;
     cout << "SHUFFLED =====================" << endl;
     cout << "" <<endl;
+    pl.removeSong("COFFEE BEAN");
     pl.play_list();
-    
     close();
     
     return 0;
