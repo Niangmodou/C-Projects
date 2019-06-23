@@ -10,10 +10,12 @@ private:
     vector<string>songList;
     
 public:
+    //USED TO ADD SONGS TO PLAYLIST
     void add_song(string songName){
         songList.push_back(songName);
     }
     
+    //USED TO ADD A SONG AFTER A CERTAIN SONG
     void add_song_after(string song_name,string new_song_name){
         bool contains = inList(song_name);
         if (contains){
@@ -33,6 +35,7 @@ public:
         
     }
     
+    //CHECK IF A SONG IS CURRENTLY IN THE PLAYLIST
     bool inList(string song_name){
         for(int i = 0; i < songList.size(); i++){
             if(songList.at(i) == song_name){
@@ -42,6 +45,7 @@ public:
         return false;
     }
     
+    //IMITATES PLAYING A SONG FROM THE PLAYLIST
     void play_song(string song_name){
         bool contains = inList(song_name);
         if (!contains){
@@ -51,11 +55,13 @@ public:
         }
     }
     
+    //PLAYS THE WHOLE PLAYLIST
     void play_list(){
         for (int i = 0 ; i < songList.size(); i++){
             cout << "Playing: " << songList.at(i) << endl;
         }
     }
+    //SHUFFLES THE PLAYLIST
     void shuffle(){
         vector<string>newList;
         int num;
