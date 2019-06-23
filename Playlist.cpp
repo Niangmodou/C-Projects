@@ -1,7 +1,7 @@
 #include <iostream>
 #include <vector>
 #include <cstdlib>
-//#include <ctime>
+#include <ctime>
 
 using namespace std;
 
@@ -60,7 +60,7 @@ public:
         vector<string>newList;
         int num;
         
-        //srand(time(NULL));
+        srand(time(NULL));
         
         
         while (newList.size() != songList.size()){
