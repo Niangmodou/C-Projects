@@ -6,9 +6,11 @@ BankAccount.cpp - A very basic simulation of an ATM.
 
 BinarySearch.cpp - Binary Search Algorithm performed on a C++ Vector
 
-BubbleSort.cpp - Bubble sorting algorithm
+BubbleSort.cpp - An implementation of the bubble sorting algorithm
 
 Gradebook.cpp - A gradebook that helps professors organize the scores of their student's exams.
+
+MaxProfit.cpp - A program that 
 
 Playlist.cpp - A playlist class that simulates the functionality of a music playlist.
 
