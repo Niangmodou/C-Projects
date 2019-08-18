@@ -10,7 +10,7 @@ BubbleSort.cpp - An implementation of the bubble sorting algorithm
 
 Gradebook.cpp - A gradebook that helps professors organize the scores of their student's exams.
 
-MaxProfit.cpp - A program that 
+MaxProfit.cpp - A program that finds the maximum difference in a vector 
 
 Playlist.cpp - A playlist class that simulates the functionality of a music playlist.
 
