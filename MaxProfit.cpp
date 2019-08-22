@@ -41,9 +41,11 @@ int main(){
 	lst.push_back(11);
 
 	cout<<"Stock Prices: ";
-	for (int i = 0; i < lst.size(); i++){
-		cout<<lst.at(i)<<" ";
+	
+	for (auto i : lst){
+		cout << lst.at(i) << " ";
 	}
+	
 	cout<<endl;
 	cout << "Profit: " << max_price(lst) << endl;
 
