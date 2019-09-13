@@ -1,4 +1,4 @@
-# C-Projects
+# Cpp-Projects
 
 This Repository is a collection of the C++ scripts I have written. 
 
