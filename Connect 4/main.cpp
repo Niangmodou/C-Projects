@@ -1,6 +1,5 @@
 /*
 Connect4
-Rent The Runway - Engineering Internship
 MADE WITH LOVE BY MODOU NIANG
 */
 #include <iostream>
