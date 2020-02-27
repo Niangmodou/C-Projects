@@ -1,6 +1,7 @@
 # Cpp-Projects
 
 This Repository is a collection of the C++ scripts I have written. 
+Connect4 - A two-player version of Connect4 that runs on the comman line
 
 BankAccount.cpp - A very basic simulation of an ATM.
 
