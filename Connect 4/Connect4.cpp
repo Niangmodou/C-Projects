@@ -78,7 +78,6 @@ bool Connect4::horizontalWin(char player){
 		for(int j = 0; j < colSize-3; ++j){
 			if(board[i][j] == player && board[i][j+1] == player
 				&& board[i][j+2] == player && board[i][j+3] == player){
-				cout << "hi1" << endl;
 				return true;
 			}
 		}
@@ -91,7 +90,6 @@ bool Connect4::verticalWin(char player){
 		for(int j = 0; j < colSize; ++j){
 			if(board[i][j] == player && board[i+1][j] == player
 				&& board[i+2][j] == player && board[i+3][j] == player){
-				cout << "hi2" << endl;
 				return true;
 			}
 		}
@@ -100,12 +98,11 @@ bool Connect4::verticalWin(char player){
 }
 
 bool Connect4::diagonalWin(char player){
-	//check for Negative Diagonal FINISHED!!
+	//check for Positive Diagonal
 	for(int i = 0;i < rowSize-3; ++i){
 		for(int j = 0; j < colSize-3; ++j){
 			if(board[i][j] == player && board[i+1][j+1] == player
 				&& board[i+2][j+2] == player && board[i+3][j+3] == player){
-				cout << "hi3" << endl;
 				return true;
 			}
 		}
@@ -114,11 +111,8 @@ bool Connect4::diagonalWin(char player){
 	//check for Negative Diagonal
 	for(int i = 3;i < rowSize; ++i){
 		for(int j = 0; j < colSize-3; ++j){
-			cout << board[i][j] << " " << board[i-1][j+1]<<" "<<board[i-2][j+2] << " " << board[i-3][j+3] << endl;
 			if(board[i][j] == player && board[i-1][j+1] == player
 				&& board[i-2][j+2] == player && board[i-3][j+3] == player){
-
-				cout << "hi4" << endl;
 				return true;
 			}
 		}
